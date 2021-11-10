@@ -1,0 +1,316 @@
+/* contenedor principal del index */
+.container-index {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, minmax(min-content, max-content));
+    grid-template-areas: 
+    "container-menu  "
+   "foto-principal"
+   "cobertura"
+   "foto-companias"
+   "footer"; 
+  }
+
+  .container-menu {
+    display: grid;
+    background-color: $naranja;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 0.5fr));
+    grid-area: container-menu;
+    padding-right: 6rem;
+    box-shadow: 10px 10px 30px rgba(132, 56, 177, 0.1); }
+  
+
+.cobertura {
+    display: grid;
+    background-color: #c3c3c3;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    justify-items: center;
+    height: 35rem; }
+
+
+    .contenido-auto {
+        display: grid;
+        grid-template-columns: 0.3fr 1.7fr 1.7fr 0.3fr;
+        grid-template-rows: 1rem 9rem 4rem;
+        grid-template-areas: ". . . ."
+       ". icono-auto texto-auto ."
+       ". . . .";
+        grid-area: contenido-auto;
+        grid-column: 2 /4;
+        grid-row: 1 / 2; }
+
+        .icono-auto {
+            grid-area: icono-auto; 
+            img {
+                height: 10rem;
+                background-size: cover;
+                padding-bottom: 1rem; }
+          }
+          
+          .texto-auto {
+            grid-area: texto-auto; }
+          
+
+
+            
+    .contenido-hogar {
+        display: grid;
+        grid-template-columns: 0.4fr 1.6fr 1.6fr 0.4fr;
+        grid-template-rows: 1rem 9rem 4rem;
+        
+        grid-template-areas: ". . . ."
+        ". icono-hogar texto-hogar ."
+        ". . . .";
+        grid-area: contenido-hogar; }
+              
+        .icono-hogar {
+        grid-area: icono-hogar; 
+        img {
+            height: 10rem;
+            padding-bottom: 1rem; }
+    }
+  
+        .texto-hogar {
+        grid-area: texto-hogar; }
+              
+/*contenedor principal de quienes somos */
+.container {
+    display: grid;
+    grid-template-columns: 0.6fr 1.6fr 0.7fr;
+    grid-template-rows: repeat(10, minmax(min-content, max-content));
+    background-color: #f3f3f4;
+    grid-template-areas: "container-menu container-menu container-menu"
+   ". card1 ."
+   ". card2 ."
+   ". card3 ."
+   ". card4 ."
+   ". card5 ."
+   ". card6 ."
+   ". card7 ."
+   ". card8 ."
+   "footer footer footer"; }
+
+
+
+/*main quienes somos card 1 */
+.card1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 162px));
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-template-areas: 
+    "foto1 titulo1 titulo1"
+   "foto1 texto1 texto1"
+   "foto1 texto1 texto1";
+    grid-area: card1;
+    margin-top: 3rem; }
+  
+  .foto1 {
+    grid-area: foto1; }
+  
+  .titulo1 {
+    grid-area: titulo1; }
+  
+  .texto1 {
+    grid-area: texto1;
+    p{
+    margin-left: 5rem;
+    margin-right: -31rem;
+    }
+         }
+
+    /*card 2 */
+
+.card2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  box-shadow: 10px 10px 30px rgba(1, 0, 0, 0.1);
+  grid-template-areas: "titulo2 titulo2 ."
+ "texto2 texto2 texto2"
+ "texto2 texto2 texto2";
+  grid-area: card2;
+  background-color: #ffcbcd;
+  border-radius: 20px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  height: 12rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+.titulo2 {
+  color: $blanco;
+  grid-area: titulo2;
+  margin-top: 1rem; }
+
+.texto2 {
+  color: $blanco;
+  max-height: 50px;
+  grid-area: texto2;
+  font-size: 1.2rem; }
+
+
+/*card 3 */
+    .card3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: 
+        "titulo-3";
+        grid-area: card3; }
+      
+      .titulo-3 {
+        grid-area: titulo-3; }
+
+/* card 4 */
+.card4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "titulo4 titulo4 foto4"
+ "texto4 texto4 foto4"
+ "texto4 texto4 foto4";
+  grid-area: card4; }
+
+.titulo4 {
+  grid-area: titulo4; }
+
+.texto4 {
+  grid-area: texto4; }
+
+.foto4 {
+  grid-area: foto4; }
+
+
+/* card 5 */
+
+  .card5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "foto5 titulo5 titulo5"
+   "foto5 texto5 texto5"
+   "foto5 texto5 texto5";
+    grid-area: card5; }
+  
+  .foto5 {
+    grid-area: foto5; }
+  
+  .titulo5 {
+    grid-area: titulo5; }
+  
+  .texto5 {
+    grid-area: texto5; }
+
+
+    /* card 6 */
+
+    .card6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "titulo6 titulo6 foto6"
+       "texto6 texto6 foto6"
+       "texto6 texto6 foto6";
+        grid-area: card6; }
+      
+      .titulo6 {
+        grid-area: titulo6; }
+      
+      .texto6 {
+        grid-area: texto6; }
+      
+      .foto6 {
+        grid-area: foto6; }
+
+        /* card 7 */
+
+.card7 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: #e8e9f8;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  grid-template-areas: "foto7 titulo7 titulo7"
+ "foto7 texto7 texto7"
+ "foto7 texto7 texto7";
+  grid-area: card7;
+  border-radius: 20px; }
+
+.foto7 {
+  grid-area: foto7; }
+
+.titulo7 {
+  grid-area: titulo7; }
+
+.texto7 {
+  grid-area: texto7; }
+
+
+  /*contenedor de pagina productos */
+
+.container-productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(100px, max-content));
+    grid-template-areas: "container-menu  "
+   "principal-productos"
+   "footer"; }
+  
+  .principal-productos {
+    background-color: #f3f3f4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    padding-bottom: 10rem;
+    grid-area: principal-productos; }
+
+
+    /* PAGINA CONSULTAS*/
+.container-consultas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-template-areas: "container-menu container-menu container-menu "
+   ". caja-consultas ."
+   "footer footer footer"; }
+  
+  .caja-consultas {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 0.99fr;
+    padding-bottom: 3rem;
+    grid-area: caja-consultas; }
+
+/* PAGINA SINIESTROS */
+.denuncia-siniestros {
+    display: grid;
+    grid-template-columns: 1fr; }
+  
+  .seccion-siniestros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(909px, 1fr));
+    padding-left: 5rem; }
+  
+  .foto-chica-y-remolque {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(133px, 400px));
+    grid-auto-rows: 400px; }
+  
+
+
+/*FOOTER */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-area: footer;
+    background-color: black;
+    padding-top: 2rem; }
+  
+  .menu-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  
